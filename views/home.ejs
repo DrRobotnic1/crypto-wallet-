@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing page</title>
+    <link rel="stylesheet" href="/home.css" />
+    <script defer src="/home.js"></script>
+    
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <div class="logo"><span class="logo-span">THA</span>BANG</div>
+        <div class="buttons-container">
+          
+          <a href="btc-live-price">Help</a>
+          <a href="#" class="login btn">Login</a>
+        </div>
+      </nav>
+    </header>
+      <body>
+        <section class="hero-section">
+          <div class="hero-container">
+            <div class="hero-intro">
+              <h2 class="hero-header">
+                <span class="connecting-word">Connecting</span> <br />the world
+                to crypto
+              </h2>
+              <p class="hero-text">
+                The easy way to store,recieve,send and trade cryptocurrency
+              </p>
+              <a href="#" class="hero-signup btn">Get a free wallet</a>
+            </div>
+            <div class="hero-img-intro">
+              <img class="hero-img" src="/crypto.png" />
+            </div>
+          </div>
+        </section>
+        <section class="hero-info-section">
+          <div class="hero-info-container">
+            <div class="total-wallets"> <%= walletCount %> Wallets</div>
+            <div class="total transactions">45 Transactions</div>
+            <div>150 Countries</div>
+            <div>Powered by Exaze</div>
+          </div>
+        </section>
+        <!-- form -->
+
+  <div class="form-sign-up hidden">
+    <svg  class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close-icon">
+      <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+    </svg>
+<form method="post" action="/register">
+  <h2 class="form-header">create new accout</h2>
+  <p class="form-text">Already have an account? <a href="#" class="sign-in-link">sign in</a></p>
+  <label></label>
+  <input  name="first_name" placeholder="Enter your name">
+  <label></label>
+  <input name="last_name" placeholder="Enter your lastname">
+  <label></label>
+  <input name="email" placeholder="Enter your email">
+  <label></label>
+  <input type="password" name="password" placeholder="Enter new password">
+  <button type="submit" class="form-btn form-btn-signup" >Sign up</button>
+</form>
+  </div>
+
+  <!-- login form -->
+
+  <div class="form-sign-up form-sign-in hidden">
+    <svg  class="close-icon-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close-icon">
+      <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+    </svg>
+<form method="post" action="/login">
+  <h2 class="form-header">Log In</h2>
+  <p class="form-text">Don't have an account? <a href="#" class="sign-up-link">sign Up</a></p>
+  
+  <input name="email" placeholder="Enter your email">
+  <label></label>
+  <input type="password" name="password" placeholder="Enter new password ">
+  <button type="submit" class="form-btn form-btn-login" >Log In</button>
+  </form>
+  </div>    
+  </body>
+</html>

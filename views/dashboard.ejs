@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Wallet</title>
+    
+  </head>
+  <body>
+    <script defer
+    type="text/javascript" src="/script.js"></script>
+
+    <link rel="stylesheet" href="/dashboard.css" />
+
+    <nav class="nav-bar">
+      <div class="logo"><span class="logo-span">Wel</span>come: <%= user_name %> </div>
+      <div class="menu-container" >
+        <div ></span><span class="price"> 1,016,986.92</span></div>
+        <span><img class="south-africa-flag" src="/south-africa.png"></span><div id = "zar_balance"> R0.00</div>
+       <form method="post" action="/logout"><button type="submit" class="logout-btn" >Logout</button></form> 
+      </div>
+    </nav>
+    <div class="balance-container">
+      <p ><img class="wallet" src="/wallet.png"></p>
+          <span>BTC</span><p class="balance-btc">BTC 0.00000</p>
+          <span>btc in zar</span><p class="convert-zar">~zar 0.00</p>
+    </div>
+
+    <div class="buttons-container">
+      <a href="#" class="deposit-btn">DEPOSIT</a>
+      <a href="#" class="buy-btn">BUY</a>
+      <a href="#" class="sell-btn">SELL</a>
+      <a href="#" class="withdraw-btn">WITHDRAW</a>
+    </div>
+    <h1>TRANSACTIONS</h1>
+  
+    
+    <div class="transaction-container">
+      <table class="transaction-table">
+        <thead>
+          <tr>
+            <th>TransactionId</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+   
+          
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="form-container hidden">
+      
+      </span>
+      <h2>DEPOSIT CASH</h2>
+      <form method="post" action="/deposit">
+        <div class="input-box">
+          <input type="text" placeholder="Enter ZAR amount" name="amount" required="" />
+          <div>Current ZAR balance : R</div>
+        </div>
+        <button class="deposit">Deposit</button>
+        
+      </form>
+      <a href="#" class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close-icon">
+        <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+      </svg></a>
+    </div>
+
+    <!--  -->
+
+    <div class="form-container-buy form-container hidden"> 
+    
+    <h2>BUY BTC</h2>
+    <form method="post" action="/buy">
+      <div class="input-box">
+        <input type="text" placeholder="zar amount" name="amount" required="" />
+        
+        <div>Current BTC balance : R</div>
+      </div>
+      <button class="deposit">Buy</button>
+      
+    </form>
+    <a href="#" class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close-icon-buy close-icon">
+      <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+    </svg></a>
+  </div>
+
+  <!--  -->
+
+  <div class="form-container-sell form-container hidden">
+      
+  </span>
+  <h2>SELL BTC</h2>
+  <form>
+    <div class="input-box">
+      <input type="text" placeholder=" Enter BTC amount" name="" required="" />
+      <div>Your BTC is worth : R</div>
+    </div>
+    <button class="deposit">SELL</button>
+    
+  </form>
+  <a href="#" class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close-icon-sell close-icon">
+    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+  </svg></a>
+</div>
+
+<!--  -->
+<div class="form-container-withdraw form-container hidden">
+      
+</span>
+<h2>WIDRAW</h2>
+<form method="post" action="/withdraw"> 
+  <div class="input-box">
+    <input type="text" placeholder=" Enter amount" name="amount" required="" />
+    <div>Your BTC is worth : R</div>
+  </div>
+  <button class="deposit">WIDRAW</button>
+  
+</form>
+<a href="#" class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="close-icon-widraw close-icon">
+  <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg></a>
+</div>
+
+
+  </body>
+</html>

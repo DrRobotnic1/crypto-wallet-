@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.nav-bar {
+  /* background-color: #3a9fdf; */
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  border-bottom: 1px solid #6b62fe;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-weight: bold;
+  color: #0b283d;
+  font-size: 2rem;
+}
+
+.logo-span {
+  color: #6b62fe;
+}
+
+.menu-container {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.balance-container {
+  background-color: #fff;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 5rem 10rem;
+  font-weight: bold;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+  line-height: 1.4;
+
+  position: relative;
+}
+
+.buttons-container {
+  background-color: #6b62fe;
+  width: 40rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+  border-radius: 2%;
+  color: #ffffff;
+}
+.buttons-container a {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.balance-btc,
+.convert-zar {
+  font-size: 1.8rem;
+  color: #33cc33;
+}
+
+.deposit-btn:active,
+.deposit-btn:hover {
+  color: white;
+  transition: all 0.5s;
+  font-size: 2rem;
+  color: #000408;
+}
+.buy-btn:active,
+.buy-btn:hover {
+  color: white;
+
+  transition: all 0.5s;
+  font-size: 2rem;
+  color: #0b283d;
+}
+.sell-btn:active,
+.sell-btn:hover {
+  color: white;
+  transition: all 0.5s;
+  font-size: 2rem;
+  color: #0b283d;
+}
+.withdraw:active,
+.withdraw-btn:hover {
+  transition: all 3s;
+  color: white;
+  transition: all 0.5s;
+  font-size: 2rem;
+  color: #0b283d;
+}
+
+.logout-btn {
+  width: 15rem;
+  height: 2.5rem;
+  background-color: #6b62fe;
+  border: none;
+  border-radius: 5%;
+  font-weight: bold;
+}
+
+.logout-btn:active,
+.logout-btn:hover {
+  color: white;
+  background-color: #0b283d;
+}
+
+.transaction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 5rem 10rem;
+  font-weight: bold;
+  overflow-y: auto;
+  position: relative;
+  height: 24rem;
+}
+
+/* table */
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+th,
+td {
+  padding: 16px 24px;
+  text-align: left;
+}
+
+thead th {
+  background-color: #6b62fe;
+  color: #fff;
+  width: 25%;
+  position: sticky;
+  top: 0;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9ecef;
+}
+
+/* form */
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  height: 5rem;
+  padding: 100px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 1%;
+}
+
+.form-container h2 {
+  margin: 0;
+  padding: 0;
+  color: #6b62fe;
+  text-align: center;
+}
+
+.form-container .input-box input {
+  width: 100%;
+  /* padding: 10px 0; */
+  font-size: 16px;
+  color: #242525;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border: none;
+  border-bottom: 2px solid #6b62fe;
+  background: transparent;
+}
+
+.deposit {
+  width: 100%;
+  border: none;
+  background-color: #6b62fe;
+  height: 3rem;
+  border-radius: 2%;
+}
+
+.close-icon {
+  color: black;
+  width: 2rem;
+  height: 2rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(850%, -400%);
+}
+
+.close-icon:active,
+.close-icon:hover {
+  color: red;
+  transition: all 0.3s;
+}
+
+.hidden {
+  display: none;
+}
+
+.live-price {
+  color: #6b62fe;
+}
+
+/* live price */
+
+.price {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.increase {
+  color: green;
+}
+.decrease {
+  color: red;
+}
+
+.btc-img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.wallet {
+  width: 5rem;
+}
+
+.south-africa-flag {
+  width: 3rem;
+}
