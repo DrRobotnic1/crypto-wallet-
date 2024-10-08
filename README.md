@@ -4,7 +4,8 @@ Frontend-Ejs - Html-css-js
 Backend- ExpressJs,Nodejs and Mysql
 
 Wallet UML Diagram
+![ERD drawio](https://github.com/user-attachments/assets/f31b768f-3d65-408b-880e-acd0b1a88c4e)
 
 
 
-![wallet erd](https://github.com/user-attachments/assets/78f7e341-f441-40b8-96fe-a6e94d51cd38)
+
